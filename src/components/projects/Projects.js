@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sharp, blood, book, major, pixel, text } from "../../assets/index";
+import { nscc, leitner, news, major, textcraft, cloud } from "../../assets/index";
 import Title from '../layouts/Title';
 import ProjectsCard from './ProjectsCard';
 
@@ -14,55 +14,50 @@ const Projects = () => {
           title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK"
           des="My Projects"
         />
-      </div>
+      </div>a
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
       <ProjectsCard
-          title="BLOOD CONNECT | A Blood Bank's Web Application"
-          des="Developed a Web App that connects blood donors with people in need.
-          This application allows users to register as 1-blood donors or 2-blood requesters
-          and search for blood donors based on location and blood type."
-          src={blood}
-          git="https://github.com/Shauryaa007/BloodConnect"
-          live="https://bloodconnect007.netlify.app/"
+          title="LEITNER SYSTEM | A FLASHCARD LEARNING SYSTEM"
+          des="Developed a flashcard learning system with spaced repetition using React.js and Node.js, featuring adaptive review logic for efficient, personalized learning."
+          src={leitner}
+          git=""
+          live="http://leitner-system.onrender.com"
         />
         <ProjectsCard
-          title="BOOK BROWSE | A WEB APPLICATION THAT CONNECT PEOPLE ONLINE"
-          des="Designed and deployed a fully fledged online book marketplace using 1-ReactJS and 2-Firebase, enabling users to
-          buy and sell books with ease, Implemented user authentication using Firebase Authentication, ensuring secure access to the platform."
-          src={book}
-          git="https://github.com/Shauryaa007/BookBrowse"
-          live="https://book-browse.vercel.app/"
+          title="CurrentCove || Real Time News Platform."
+          des="Developed CurrentCove, a dynamic React web app that aggregates real-time news from 20+ sources, with sorting features and article summarization, reducing reading time by 50%."
+          src={news}
+          git="https://github.com/MukulAggarwal21/CurrentCove"
+          live=""
         />
         <ProjectsCard
-          title="TEXT ANALYZER | A React-Based Web Application"
-          des=" Designed a Web App that analyzes user-provided text and displays various metrics
-          such as 1-word count, 2-character count, and 3-UpperCase/LoweCase, 4-Copy the
-          Text and many more using ReactJS"
-          src={text}
-          git="https://github.com/Shauryaa007/TextUtils-React"
-          live="https://textanalyzer007.netlify.app/"
+          title="Mini Cloud | A Pocket Cloud Storage"
+          des="Built a Cloud management web app with features like file upload, folder creation, search, and storage tracking, supporting multiple file types for easy organization and access."
+          src={cloud}
+          git="https://github.com/MukulAggarwal21/mini_cloud"
+          live="https://mini-cloud-project.vercel.app/"
         />
        
         <ProjectsCard
-          title="Pixel WhiteBoard"
-          des="Accomplished React JS Developer | Proudly Completed a Robust Pixel board Project in React | Leveraging State-of-the-Art Techniques for Showcasing Creativity"
-          src={pixel}
-          git="https://github.com/Shauryaa007/React-pixel-board"
-          live="https://pixelboard07.netlify.app/"
+          title="TextCraftHub ||  A React Application"
+          des="TextCraftHub is a compact text editor that transforms your content with simple formatting tools. It offers case conversion, space removal, and provides instant word count statistics.RetryClaude can make mistakes. Please double-check responses."
+          src={textcraft}
+          git="https://github.com/MukulAggarwal21/TextCraftHub"
+          live="https://mukulaggarwal21.github.io/TextCraftHub/"
         />
          <ProjectsCard
-          title="Sharp Studios || My first Project"
-          des=" Studio website frontend , used HTML CSS for the frontend designing and 
-                it also contain a form for getting signed in. this was one of the initial project that i made when i started Web-Development"
-          src={Sharp}
-          git="https://github.com/Shauryaa007/sharpstudios"
-          live="https://sharpstudios.netlify.app/"
+          title="NSCC WEBSITE || Club Website"
+          des=" Built and deployed NSCC’s website using Next.js and Node.js, featuring club activities and resources, and integrated a system to manage 50+ educational lectures via REST API."
+          src={nscc}
+          git="https://github.com/MukulAggarwal21/nsccwebsite"
+          live="https://nscckiet.vercel.app/"
         />
         <ProjectsCard
-          title="AUTOMATIC ATTENDANCE MARKER | Major Project"
-          des="Implemented an Automatic Attendance Marker that uses OpenCV’s face
-          recognition technology to recognize and mark the attendance of students ."
+          title="Gemnest || Jewellery Web Application | My Fist Project" 
+          des="Developed a jewelry website that displays products by category, enabling easy browsing of necklaces, earrings, bracelets, and rings through a clean, user-friendly interface."
           src={major}
+          git="https://github.com/MukulAggarwal21/Gemnest"
+          live="https://gemnest.vercel.app/"
         />
       </div>
     </section>
