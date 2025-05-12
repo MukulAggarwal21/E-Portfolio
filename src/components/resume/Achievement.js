@@ -11,33 +11,36 @@ const Achievement = () => {
     >
       <div>
         <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2020 - 2024</p>
+          <p className="text-sm text-designColor tracking-[4px]">2022 - Present</p>
           <h2 className="text-4xl font-bold">ACCOLADES</h2>
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="Runner up in KICCS-D-HACK 23.5"
-            subTitle="(Coding Competition in college)"
+            title="Secured 3rd Position in GDSC Hackathon."
+            subTitle="Hackathon - Gurugram."
             // result="Success"
-            des="Honored to receive the Runner-up award in the department-level of KICCS-D-HACK 23.6 from our esteemed HOD and Dean-AC . "
+            des="I led my team to secure 3rd place out of 100+ teams in the GDSC Hackathon, where we developed a real-time gas leakage detection system that seamlessly merged hardware innovation with software precision."
           />
           <ResumeCard
-            title="3-Star at CODECHEF."
-            subTitle="Competitive Programming"
+            title="Secured 4th Position in TRIKON1.0"
+            subTitle="Hackathon - Delhi NCR"
             //result="Success"
-            des="Achieved a 3-star rating on CodeChef! I'm grateful for the challenges, the knowledge gained, and the incredible community that has supported me along the way. "
+            des="Participated in TRIKON1.0 — a great experience filled with learning and collaboration. It was an amazing opportunity to explore new ideas, gain insights, and connect with brilliant minds. Wrapped up with lots of goodies and valuable connections.
+ "
           />
           <ResumeCard
-            title="Solved 1000+ DSA problems."
-            subTitle="On Different coding platforms."
+            title="Runner up in Innotech Hackathon."
+            subTitle="Hackathon - KIET."
             //result="Success"
-            des="Successfully solved 500+ Data Structures and Algorithms problems!  It's been an incredible journey of continuous learning, problem-solving, and honing my coding skills. "
+            des="Leading my tech team at Innotech Fest was an amazing experience! We showcased our project, connected with others, and gained valuable insights, leaving a lasting impact on my college journey, with goodies and resources & a lot of Connections.
+
+"
           />
         </div>
       </div>
       <div>
         <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2020 - 2024</p>
+          <p className="text-sm text-designColor tracking-[4px]">2022 - Present</p>
           <h2 className="text-4xl font-bold">EXTRACURRICULAR</h2>
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
@@ -46,7 +49,7 @@ const Achievement = () => {
             subTitle="Web Development Bootcamp."
             //result="Success"
             des="• Organized and led a successful 1-week-long web development boot camp
-            for 50+ participants. Topics covered included HTML, CSS, and JavaScript.
+            for 50+ participants. Topics covered included HTML, CSS, JavaScript and React.
             • Received high praise from over 30 + participants for providing a valuable and
             engaging learning experience."
           />
@@ -59,10 +62,10 @@ const Achievement = () => {
             from various industries."
           />
           <ResumeCard
-            title="VICE PRESIDENT / DSA LEAD."
-            subTitle="Newton school coding club (KIET)."
+            title="Administrator "
+            subTitle="CPByte Coding Club (KIET)."
             //result="Success"
-            des=" Served as the Vice President and DSA Lead for the NSCC KIET. In this role, I was
+            des=" Served as the Administrator  and DSA Lead for the CPByte KIET. In this role, I was
             responsible for organizing and leading technical events and workshops for the club.
             And also mentored and guided over 100+ students/members in their learning."
           />
