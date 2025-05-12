@@ -11,7 +11,7 @@ const ContactLeft = () => {
         alt="contactImg"
       />
       <div className="flex flex-col gap-4">
-        <h3 className="text-3xl font-bold text-white">Shaurya Awasthi</h3>
+        <h3 className="text-3xl font-bold text-white"> Mukul Aggarwal</h3>
         <p className="text-lg font-normal text-gray-400">
           
         </p>
@@ -20,10 +20,10 @@ const ContactLeft = () => {
           ipsam autem cumque, accusantium dicta odio.
         </p> */}
         <p className="text-base text-gray-400 flex items-center gap-2">
-          Phone: <span className="text-lightText">+91 **********</span>
+          Phone: <span className="text-lightText">+91 8534877688</span>
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
-          Email: <span className="text-lightText">shauryaawasthi31@gmail.com</span>
+          Email: <span className="text-lightText">mukulaggarwal219@gmail.com</span>
         </p>
       </div>
       

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FcDownload } from "react-icons/fc";
-import Shaurya_Resume from "../../assets/resume.pdf";
+import Mukul_Resume from "../../assets/MukulAggarwalResume.pdf";
 import Title from '../layouts/Title';
 import Achievement from './Achievement';
 import Education from './Education';
@@ -16,7 +16,7 @@ const Resume = () => {
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex justify-center items-center text-center">
         <Title title="All About Me" des="My Resume" />
-       <a href={Shaurya_Resume} download="RESUME (SHAURYA_AWASTHI)"> <FcDownload style={{marginLeft:"0.5em",fontSize:"2.5em", cursor:"pointer"}} /></a>
+       <a href={Mukul_Resume} download="RESUME (MUKUL_AGGARWAL)"> <FcDownload style={{marginLeft:"0.5em",fontSize:"2.5em", cursor:"pointer"}} /></a>
       </div>
       <div>
         <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">

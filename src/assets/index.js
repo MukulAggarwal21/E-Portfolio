@@ -1,4 +1,4 @@
-import logo from "./images/logo.png";
+import logo from "./images/title.png";
 import Mukul from "./images/Mukul.jpg";
 import Sharp from "./images/projects/Sharp.png";
 import blood from "./images/projects/blood.png";
