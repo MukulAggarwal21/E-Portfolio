@@ -1,351 +1,157 @@
-import { motion } from 'framer-motion';
 import React from 'react';
+import { useState } from 'react';
+import { CgCPlusPlus } from "react-icons/cg";
+import {
+  DiJavascript1,
+  DiReact,
+  DiNodejs,
+  DiMongodb,
+  DiPython,
+  DiGit,
+  DiJava,
+  DiMysql,
+} from "react-icons/di";
+import {
+  SiRedis,
+  SiNextdotjs,
+  SiPostgresql,
+  SiDjango,
+  SiTypescript,
+  SiGo,
+  SiVisualstudiocode,
+  SiPostman,
+  SiSlack,
+  SiVercel,
+  SiLinux,
+  SiGit,
+  SiHeroku,
+  SiDocker,
+  SiGithub,
+  SiNotion,
+  SiNetlify,
+} from "react-icons/si";
 
-const Skills = () => {
+export default function ProfessionalSkillset() {
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+  const [hoveredTool, setHoveredTool] = useState(null);
+  
+  const skills = [
+    { id: 'cpp', name: 'C++', icon: CgCPlusPlus },
+    { id: 'js', name: 'JavaScript', icon: DiJavascript1 },
+    { id: 'ts', name: 'TypeScript', icon: SiTypescript },
+    { id: 'node', name: 'Node.js', icon: DiNodejs },
+    { id: 'react', name: 'React', icon: DiReact },
+    { id: 'next', name: 'Next.js', icon: SiNextdotjs },
+    { id: 'django', name: 'Django', icon: SiDjango },
+    { id: 'git', name: 'Git', icon: DiGit },
+    { id: 'mongo', name: 'MongoDB', icon: DiMongodb },
+    { id: 'postgres', name: 'PostgreSQL', icon: SiPostgresql },
+    { id: 'mysql', name: 'MySQL', icon: DiMysql },
+    { id: 'redis', name: 'Redis', icon: SiRedis },
+    { id: 'python', name: 'Python', icon: DiPython },
+    { id: 'java', name: 'Java', icon: DiJava },
+    { id: 'go', name: 'Go', icon: SiGo },
+  ];
+  
+  const tools = [
+    { id: 'linux', name: 'Linux', icon: SiLinux },
+    { id: 'vscode', name: 'VS Code', icon: SiVisualstudiocode },
+    { id: 'postman', name: 'Postman', icon: SiPostman },
+    { id: 'slack', name: 'Slack', icon: SiSlack },
+    { id: 'vercel', name: 'Vercel', icon: SiVercel },
+    { id: 'netlify', name: 'Netlify', icon: SiNetlify },
+    { id: 'heroku', name: 'Heroku', icon: SiHeroku },
+    { id: 'docker', name: 'Docker', icon: SiDocker },
+    { id: 'github', name: 'GitHub', icon: SiGithub },
+    { id: 'notion', name: 'Notion', icon: SiNotion },
+  ];
+
+  const renderSkillIcon = (skill) => {
+    return React.createElement(skill.icon, { 
+      className: "text-5xl md:text-6xl text-white" 
+    });
+  };
+
+  const renderToolIcon = (tool) => {
+    return React.createElement(tool.icon, { 
+      className: "text-5xl md:text-6xl text-white" 
+    });
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
-    >
-      <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Features
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Technical Skills</h2>
-        </div>
-        <div className='className="mt-14 w-full flex flex-col gap-6'>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">C-Language</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[80%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">80%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">C++</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Data Structures & Algorithms</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">HTML5</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[100%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">100%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">CSS</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[85%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">85%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">JavaScript</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">React-js</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Git & GitHub</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">MYSQL</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[80%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">80%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Python</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[75%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">75%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Google Firebase</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[75%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">75%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          
-
-        </div>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-opacity-95 text-white p-4">
+      {/* Stars background effect */}
+      <div className="fixed inset-0 z-0">
+        {[...Array(100)].map((_, i) => (
+          <div 
+            key={i}
+            className="absolute rounded-full bg-white"
+            style={{
+              width: `${Math.random() * 2 + 1}px`,
+              height: `${Math.random() * 2 + 1}px`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              opacity: Math.random() * 0.7 + 0.3,
+            }}
+          />
+        ))}
       </div>
 
-      <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Features
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Non-Tech Skill</h2>
+      <div className="relative z-10 w-full max-w-6xl space-y-16">
+        {/* Professional Skillset Section */}
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            Professional <span className="text-purple-400">Skillset</span>
+          </h1>
+
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+            {skills.map((skill) => (
+              <div
+                key={skill.id}
+                className="aspect-square flex items-center justify-center border border-purple-500 rounded-lg transition-all duration-300 hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer bg-black bg-opacity-75 p-2"
+                onMouseEnter={() => setHoveredSkill(skill.id)}
+                onMouseLeave={() => setHoveredSkill(null)}
+              >
+                <div className="flex flex-col items-center justify-center h-full w-full relative">
+                  {renderSkillIcon(skill)}
+                  {hoveredSkill === skill.id && (
+                    <span className="text-lg md:text-xl text-purple-300 font-medium mt-2 transition-all duration-300">
+                      {skill.name}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-6">
-
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Communication</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Time management</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[100%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">100%</span>
-              </motion.span>
-            </span>
-          </div>
-
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">cooperation</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[97%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">97%</span>
-              </motion.span>
-            </span>
-          </div>
-
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">adaptability</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[100%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">100%</span>
-              </motion.span>
-            </span>
-          </div>
-
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Problem solving</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[100%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">100%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">leadership</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[100%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">100%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Story telling</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Collaboratin</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[90%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">90%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">creativity</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[90%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">90%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">prioritization</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">enthusiasm</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[99%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">99%</span>
-              </motion.span>
-            </span>
-          </div>
-
+        
+        {/* Tools Section */}
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            <span className="text-purple-400">Tools</span> I Use
+          </h1>
           
-
-          
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+            {tools.map((tool) => (
+              <div
+                key={tool.id}
+                className="aspect-square flex items-center justify-center border border-purple-500 rounded-lg transition-all duration-300 hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer bg-black bg-opacity-75 p-2"
+                onMouseEnter={() => setHoveredTool(tool.id)}
+                onMouseLeave={() => setHoveredTool(null)}
+              >
+                <div className="flex flex-col items-center justify-center h-full w-full relative">
+                  {renderToolIcon(tool)}
+                  {hoveredTool === tool.id && (
+                    <span className="text-lg md:text-xl text-purple-300 font-medium mt-2 transition-all duration-300">
+                      {tool.name}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
-
-export default Skills
