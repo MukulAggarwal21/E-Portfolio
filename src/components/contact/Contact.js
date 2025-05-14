@@ -1,6 +1,7 @@
-import React,{useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
+import emailjs from 'emailjs-com'; 
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -19,6 +20,16 @@ const Contact = () => {
   };
   // ========== Email Validation end here ================
 
+  // Automatically clear successMsg after 5 seconds
+  useEffect(() => {
+    if (successMsg) {
+      const timer = setTimeout(() => {
+        setSuccessMsg("");
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMsg]);
+
   const handleSend = (e) => {
     e.preventDefault();
     if (username === "") {
@@ -34,17 +45,38 @@ const Contact = () => {
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
+      // Send email using EmailJS
+      emailjs.send(
+        'service_dmick7u',     // Replace with your EmailJS service ID
+        'template_2e9d1b5',    // Replace with your EmailJS template ID
+        {
+          from_name: username,
+          from_email: email,
+          phone: phoneNumber,
+          subject: subject,
+          message: message,
+        },
+        'uO5yMYLEmF3Wv0oNM'    // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          setSuccessMsg(
+            `Thank you dear ${username}, Your Message has been sent Successfully!`
+          );
+          setErrMsg("");
+          setUsername("");
+          setPhoneNumber("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        },
+        (error) => {
+          setErrMsg("Failed to send message. Please try again later.");
+        }
       );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
     }
   };
+
   return (
     <section
       id="contact"
@@ -143,7 +175,7 @@ const Contact = () => {
               <div className="w-full">
                 <button
                   onClick={handleSend}
-                  className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
+                  className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-green-500 border-transparent"
                 >
                   Send Message
                 </button>
