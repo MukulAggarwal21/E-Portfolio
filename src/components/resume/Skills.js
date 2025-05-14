@@ -81,7 +81,7 @@ export default function ProfessionalSkillset() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-opacity-95 text-white p-4">
       {/* Stars background effect */}
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         {[...Array(100)].map((_, i) => (
           <div 
             key={i}
