@@ -71,17 +71,17 @@ const Navbar = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4 flex-wrap items-center">
-                  <a href="https://github.com/MukulAggarwal21">
+                  <a href="https://github.com/MukulAggarwal21" target="_blank" rel="noopener noreferrer">
                     <span className="bannerIcon flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-designColor transition-colors duration-300">
                       <BsGithub size={22} />
                     </span>
                   </a>
-                  <a href="https://x.com/MUKULAGGAR21904">
+                  <a href="https://x.com/MUKULAGGAR21904" target="_blank" rel="noopener noreferrer">
                     <span className="bannerIcon flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-designColor transition-colors duration-300">
                       <FaTwitter size={22} />
                     </span>
                   </a>
-                  <a href="https://www.linkedin.com/in/mukul-aggarwal-850368261">
+                  <a href="https://www.linkedin.com/in/mukul-aggarwal-850368261" target="_blank" rel="noopener noreferrer">
                     <span className="bannerIcon flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-designColor transition-colors duration-300">
                       <FaLinkedinIn size={22} />
                     </span>

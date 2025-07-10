@@ -14,14 +14,14 @@ const Media = () => {
           Find me in
         </h2>
         <div className="flex gap-4">
-          <a href="https://github.com/MukulAggarwal21https://github.com/MukulAggarwal21"><span className="bannerIcon">
+          <a href="https://github.com/MukulAggarwal21https://github.com/MukulAggarwal21" target="_blank" rel="noopener noreferrer"><span className="bannerIcon">
             <BsGithub />
           </span></a>
 
-          <a href="https://www.linkedin.com/in/mukul-aggarwal-850368261/"><span className="bannerIcon">
+          <a href="https://www.linkedin.com/in/mukul-aggarwal-850368261/" target="_blank" rel="noopener noreferrer"><span className="bannerIcon">
             <FaLinkedinIn />
           </span></a>
-          <a href="https://www.instagram.com/mukul_aggarwal21_/"><span className="bannerIcon">
+          <a href="https://www.instagram.com/mukul_aggarwal21_/" target="_blank" rel="noopener noreferrer"><span className="bannerIcon">
             <FaInstagram />
           </span></a>
         </div>
