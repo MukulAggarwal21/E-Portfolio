@@ -15,6 +15,14 @@ const Experience = () => {
           <h2 className="text-4xl font-bold">Job Experience</h2> */}
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-auto lgl:h-[1000px] border-l-[3px] lgl:border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-6 lgl:gap-10">
+           <ResumeCard
+            title="React Developer Intern"
+            subTitle="STDYtable - (June 2025 - Present)"
+            result="Remote"
+            des="Founding React Developer Intern leading the development of the company’s main website and admin portal,
+playing a pivotal role in shaping the product from its early stages.Led feature launch with intern guidance and cross-team collaboration built real-time functionality for enhanced
+responsiveness."
+          />
           <ResumeCard
             title="Full Stack Intern"
             subTitle="Agile Growth Tech - (Sep 2024 - Feb 2025)"
