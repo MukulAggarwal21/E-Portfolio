@@ -14,7 +14,7 @@ const Media = () => {
           Find me in
         </h2>
         <div className="flex gap-4">
-          <a href="https://github.com/MukulAggarwal21https://github.com/MukulAggarwal21" target="_blank" rel="noopener noreferrer"><span className="bannerIcon">
+          <a href="https://github.com/MukulAggarwal21" target="_blank" rel="noopener noreferrer"><span className="bannerIcon">
             <BsGithub />
           </span></a>
 
