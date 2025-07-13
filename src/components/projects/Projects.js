@@ -35,7 +35,7 @@ const Projects = () => {
           des="Built a Cloud management web app with features like file upload, folder creation, search, and storage tracking, supporting multiple file types for easy organization and access."
           src={cloud}
           git="https://github.com/MukulAggarwal21/mini_cloud"
-          live="https://mini-cloud-project.vercel.app/"
+          live="https://mini-cloud-woad.vercel.app/"
         />
        
         <ProjectsCard
