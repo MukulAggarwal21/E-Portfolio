@@ -20,8 +20,8 @@ const Projects = () => {
           title="LEITNER SYSTEM | A FLASHCARD LEARNING SYSTEM"
           des="Developed a flashcard learning system with spaced repetition using React.js and Node.js, featuring adaptive review logic for efficient, personalized learning."
           src={leitner}
-          git=""
-          live="http://leitner-system.onrender.com"
+          git="https://leitner-system-mukul.vercel.app/"
+          live="https://leitner-system-mukul.vercel.app/"
         />
         <ProjectsCard
           title="CurrentCove || Real Time News Platform."

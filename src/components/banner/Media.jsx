@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsGithub } from "react-icons/bs";
-import { FaInstagram, FaLinkedinIn, FaReact, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 // import { RiHtml5Fill } from "react-icons/ri";
 import { IoLogoNodejs } from "react-icons/io5";
